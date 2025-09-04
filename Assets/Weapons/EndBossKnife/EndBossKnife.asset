@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55914a7a08d461d4198a849427539396, type: 3}
+  m_Name: EndBossKnife
+  m_EditorClassIdentifier: 
+  hitSound: {fileID: 0}
+  type: 0
+  damageType: 0
+  name: EndBossKnife
+  description: End Boss Knife
+  minDamage: 15
+  maxDamage: 30
+  range: 0
+  burstRange: 0
+  strenght: 2
+  ctiticalChance: 0
+  weight: 1
+  price: 0
+  size: 0
+  store: {fileID: 0}
+  burstSize: 0
+  idleAnimationName: Idle
+  attackAnimationName: Punch
+  burstAnimationName: 
+  mode: 0
+  availableModes: 00000000
+  image: {fileID: 0}

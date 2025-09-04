@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebe2219d6505ea94e9a7f072a419100d, type: 3}
+  m_Name: AdvancedPowerArmor
+  m_EditorClassIdentifier: 
+  name: AdvancedPowerArmor
+  commonDamageResistance: 55
+  laserDamageResistance: 90
+  fireDamageResistance: 70
+  plasmaDamageResistance: 60
+  explosionDamageResistance: 65
+  electricityDamageResistance: 60
+  electromagneticPulseDamageResistance: 500
+  commonDamageThreshold: 15
+  laserDamageThreshold: 19
+  fireDamageThreshold: 16
+  plasmaDamageThreshold: 15
+  explosionDamageThreshold: 20
+  electricityDamageThreshold: 15
+  electromagneticPulseDamageThreshold: 0
+  weight: 45
+  size: 15
+  hitSound: {fileID: 0}
+  image: {fileID: 2800000, guid: c7013a648ac9c0b4d9ea6d55285a678e, type: 3}

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d938a59a4994e4bbb61fc484937a68, type: 3}
+  m_Name: PowerArmor
+  m_EditorClassIdentifier: 
+  name: PowerArmor
+  commonDamageResistance: 12
+  laserDamageResistance: 18
+  fireDamageResistance: 12
+  plasmaDamageResistance: 10
+  explosionDamageResistance: 20
+  electricityDamageResistance: 12
+  electromagneticPulseDamageResistance: 15
+  commonDamageThreshold: 40
+  laserDamageThreshold: 80
+  fireDamageThreshold: 60
+  plasmaDamageThreshold: 40
+  explosionDamageThreshold: 50
+  electricityDamageThreshold: 40
+  electromagneticPulseDamageThreshold: 500
+  weight: 42
+  size: 0
+  hitSound: {fileID: 0}
+  image: {fileID: 2800000, guid: 1b1c0ef3662dc8047841d73f3215370c, type: 3}

@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc2bc0f944a5034b8519a8786b6877b, type: 3}
+  m_Name: Character
+  m_EditorClassIdentifier: 
+  name: Frank Horrigan
+  chosenOne: 0
+  state: 0
+  strenght: 3
+  perception: 6
+  endurance: 6
+  charisma: 7
+  intelligence: 6
+  agility: 4
+  luck: 6
+  hitPoints: 150
+  currentHitPoints: 150
+  armorClass: 4
+  additionalArmorClass: 0
+  carryWeight: 100
+  actionPoints: 7
+  combatActionPoints: 7
+  sequence: 12
+  healingRate: 2
+  perkRate: 3
+  fireResistance: 0
+  radiationResistance: 12
+  damageResistance: 0
+  poisonResistance: 30
+  skillRate: 17
+  criticalChance: 6
+  meleeDamage: 1
+  skills:
+  - {fileID: 11400000, guid: 2d225a50596f4b04fbe8b10e0c31ba9a, type: 2}
+  - {fileID: 11400000, guid: 10ea749dc406465458f87beebcb3fd81, type: 2}
+  - {fileID: 11400000, guid: 707f0ed614312034891e4dab1e0920b5, type: 2}
+  - {fileID: 11400000, guid: a15d46143ce9f814e9dccb868d9a7c42, type: 2}
+  - {fileID: 11400000, guid: 42b78db1447d7cf41849a581ce92a24d, type: 2}
+  - {fileID: 11400000, guid: 5e7bc1fa51a77e443b4da580dca62410, type: 2}
+  - {fileID: 11400000, guid: f2920d62bdc9024458881d96e5ea7e22, type: 2}
+  - {fileID: 11400000, guid: d63577bffdbb12746bcb3c1525a20b81, type: 2}
+  - {fileID: 11400000, guid: cdf5dd29c39a7d04cb02d175660dc004, type: 2}
+  - {fileID: 11400000, guid: ad22a7edac4db13419c0c2c4484193ff, type: 2}
+  - {fileID: 11400000, guid: e4742b74a5a9e404aba7bca182ee35d6, type: 2}
+  - {fileID: 11400000, guid: d6233bda27d0e3c47a397cc5433c65cd, type: 2}
+  - {fileID: 11400000, guid: 155ed9e1f169b204bab2909b882aeba3, type: 2}
+  - {fileID: 11400000, guid: 38efa20d066f58a438bbf384b57ca4d4, type: 2}
+  - {fileID: 11400000, guid: 930f8321a9ef0384396cb5cef2972313, type: 2}
+  - {fileID: 11400000, guid: df78300c0d1b3b24eab337d074ef6451, type: 2}
+  - {fileID: 11400000, guid: 1d371bfa8f2f7c94f8fc9387fec2f89f, type: 2}
+  - {fileID: 11400000, guid: 211ffa0f290ae13478fb575bd435d49d, type: 2}
+  traits:
+  - {fileID: 11400000, guid: 4dac3d3562093774683b7f12e871cf41, type: 2}
+  - {fileID: 11400000, guid: 24b84b7e80aca8d43b8b5bbde9faac1f, type: 2}
+  - {fileID: 11400000, guid: 8307dc0c96614b542876cc1659f51766, type: 2}
+  - {fileID: 11400000, guid: 6e3e05e7655cdd341bc505e0bfe93ddc, type: 2}
+  - {fileID: 11400000, guid: 9bf22299b4f4d0d44883bbfa88a5c794, type: 2}
+  - {fileID: 11400000, guid: 9a92deb4faf5cfc4db75e1a2e9b23150, type: 2}
+  - {fileID: 11400000, guid: de0ffbecffe6d6a41975ae12c54041a5, type: 2}
+  - {fileID: 11400000, guid: 9c34ac64a19b1824a829a2360fb7ca01, type: 2}
+  - {fileID: 11400000, guid: b4c6c26a822ed6e49a6016a48c84200d, type: 2}
+  - {fileID: 11400000, guid: 5b72c625321320c47819ca73a5f2431e, type: 2}
+  - {fileID: 11400000, guid: 87b3cff8352302246bcca8341f005cfc, type: 2}
+  - {fileID: 11400000, guid: 9a14546db866a5640af94c56ba9e8dc6, type: 2}
+  - {fileID: 11400000, guid: 0a3ea128abcffed4892f1b45ff2d2322, type: 2}
+  - {fileID: 11400000, guid: 827538e8673f4df408734db6e3a67836, type: 2}
+  - {fileID: 11400000, guid: 7e0ab6bb1ad9c0a42804e0ba58e601af, type: 2}
+  - {fileID: 11400000, guid: 7a26f0957dfe346408e4327e219f63c0, type: 2}
+  weapon: {fileID: 11400000, guid: d68cb3bc1623c9240b598c7e4be848a4, type: 2}
+  armor: {fileID: 0}

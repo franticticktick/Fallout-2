@@ -1,0 +1,4 @@
+repository "Fallout 2/Fallout 2@10171129390628@cloud"
+  path "/"
+    br "/main"
+    co "/main"

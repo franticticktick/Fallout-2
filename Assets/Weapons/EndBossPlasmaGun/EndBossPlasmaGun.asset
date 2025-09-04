@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55914a7a08d461d4198a849427539396, type: 3}
+  m_Name: EndBossPlasmaGun
+  m_EditorClassIdentifier: 
+  hitSound: {fileID: 8300000, guid: 2de3d3e76338de447b23dc6786b392b3, type: 3}
+  type: 5
+  damageType: 3
+  name: EndBossPlasmaGun
+  description: End Boss Plasma Gun
+  minDamage: 30
+  maxDamage: 70
+  range: 35
+  burstRange: 30
+  strenght: 1
+  ctiticalChance: 0
+  weight: 1
+  price: 0
+  size: 1
+  store: {fileID: 11400000, guid: 3d3959c9d9893dd468f4e8606bf2706d, type: 2}
+  burstSize: 3
+  idleAnimationName: Idle
+  attackAnimationName: Fire
+  burstAnimationName: BurstFire
+  mode: 1
+  availableModes: 0100000000000000
+  image: {fileID: 0}
+  ammunitionTypes: 00000000

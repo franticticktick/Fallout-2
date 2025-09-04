@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55914a7a08d461d4198a849427539396, type: 3}
+  m_Name: GatlingLaser
+  m_EditorClassIdentifier: 
+  hitSound: {fileID: 0}
+  type: 5
+  damageType: 3
+  name: GatlingLaser
+  description: GatlingLaser
+  minDamage: 20
+  maxDamage: 40
+  range: 0
+  burstRange: 40
+  strenght: 0
+  ctiticalChance: 0
+  weight: 24
+  price: 7500
+  size: 6
+  store: {fileID: 11400000, guid: 4c42829ba6cfe064f8a1b729bb51cf8b, type: 2}
+  burstSize: 10
+  idleAnimationName: TwoHandedWeapon
+  attackAnimationName: Fire
+  burstAnimationName: BurstFire
+  mode: 1
+  availableModes: 0100000003000000
+  image: {fileID: 2800000, guid: 6074ee5e14ca91c47841470b083d23db, type: 3}
+  ammunitionTypes: 00000000

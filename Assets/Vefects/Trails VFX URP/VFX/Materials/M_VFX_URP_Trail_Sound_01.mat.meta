@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 80811086e76b6d943a17f4fd3e0b3708
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 242574
+  packageName: Trails VFX - URP
+  packageVersion: 1.0.2023
+  assetPath: Assets/Vefects/Trails VFX URP/VFX/Materials/M_VFX_Trail_Sound.mat
+  uploadId: 714377

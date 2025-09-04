@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc2bc0f944a5034b8519a8786b6877b, type: 3}
+  m_Name: Character
+  m_EditorClassIdentifier: 
+  name: 
+  chosenOne: 1
+  state: 0
+  strenght: 8
+  perception: 6
+  endurance: 6
+  charisma: 1
+  intelligence: 5
+  agility: 6
+  luck: 5
+  hitPoints: 700
+  currentHitPoints: 700
+  armorClass: 6
+  additionalArmorClass: 0
+  carryWeight: 225
+  actionPoints: 8
+  combatActionPoints: 8
+  sequence: 12
+  healingRate: 2
+  perkRate: 3
+  fireResistance: 0
+  radiationResistance: 12
+  damageResistance: 0
+  poisonResistance: 30
+  skillRate: 15
+  criticalChance: 5
+  meleeDamage: 3
+  skills:
+  - {fileID: 11400000, guid: fc2abe6d4ec87f34fa04b9bca60a32ae, type: 2}
+  - {fileID: 11400000, guid: 620aa44ea8385ae48bce84aafdf03b08, type: 2}
+  - {fileID: 11400000, guid: 3fe0c704c10569144bc57d419d20730c, type: 2}
+  - {fileID: 11400000, guid: b1428c683a478ec47a9cbe96a10c1133, type: 2}
+  - {fileID: 11400000, guid: 5865c5a855b52184d8c9f3455d4d567f, type: 2}
+  - {fileID: 11400000, guid: 8540ff263ad5f8a46b1e6c219a40a45d, type: 2}
+  - {fileID: 11400000, guid: fe4dee1b63dbe884cb35610585105422, type: 2}
+  - {fileID: 11400000, guid: cb9fe91f72d23da4cbacdb9ac85f6599, type: 2}
+  - {fileID: 11400000, guid: fe57e96fb640df8469f7f7d40a1c1240, type: 2}
+  - {fileID: 11400000, guid: 173736bc852360e4f8f9cb743419a21c, type: 2}
+  - {fileID: 11400000, guid: f3c9d564ae46633418c545f4e2480944, type: 2}
+  - {fileID: 11400000, guid: c410b805ef964204293db353edb93e1a, type: 2}
+  - {fileID: 11400000, guid: cb48084f1cf05704fad6ff88f0ca8312, type: 2}
+  - {fileID: 11400000, guid: 33e52a18b662fd34eb91d7daaa9205c8, type: 2}
+  - {fileID: 11400000, guid: dad40db1cdc6ff442b0892b7021bf3be, type: 2}
+  - {fileID: 11400000, guid: ba66749bdf15c874cbe973f28c6cb31a, type: 2}
+  - {fileID: 11400000, guid: e1ebaeb076b942d46b9ca2871f7ec450, type: 2}
+  - {fileID: 11400000, guid: 515395f17d3f95544b66c55e52f5859f, type: 2}
+  traits:
+  - {fileID: 11400000, guid: fa69325bbffca1141bf8ebb2065eba8f, type: 2}
+  - {fileID: 11400000, guid: 43a2062cd52553245893e4db2770e28d, type: 2}
+  - {fileID: 11400000, guid: 98a520dd448ca6c4b88aaf8e6f1617d5, type: 2}
+  - {fileID: 11400000, guid: a4223b71dd8db294d8e1d22b2dbd8e88, type: 2}
+  - {fileID: 11400000, guid: 0aa631318023e5e4597d3822a073c65d, type: 2}
+  - {fileID: 11400000, guid: 7daaf69de2f2bbc4796900bb11892918, type: 2}
+  - {fileID: 11400000, guid: ceb5d59f3e14cc44e8d103e1982ccb92, type: 2}
+  - {fileID: 11400000, guid: 6f1142246712e8348bcb373171127a85, type: 2}
+  - {fileID: 11400000, guid: aab492d7c21191f40bc9a6610936d6ce, type: 2}
+  - {fileID: 11400000, guid: 3712fd7bf7f800f428c9c2243c6d71fe, type: 2}
+  - {fileID: 11400000, guid: e71c885909dbe7d41b6642a4ee511d88, type: 2}
+  - {fileID: 11400000, guid: 355190c4c4fb36b4f966d975c1978f79, type: 2}
+  - {fileID: 11400000, guid: a373e9d1f90b0304c901cf8c3fc9eff4, type: 2}
+  - {fileID: 11400000, guid: b283b94c44f412945a3a15ec6e995b80, type: 2}
+  - {fileID: 11400000, guid: 29cd319a6adcd15458454cde37a8cb3f, type: 2}
+  - {fileID: 11400000, guid: af8726763fba2f14b9973c8aa699c608, type: 2}
+  weapon: {fileID: 11400000, guid: 30123d26de9105344bc2cb98ab31254e, type: 2}
+  armor: {fileID: 11400000, guid: 357713bb63a771d46b6ae188dea767ff, type: 2}

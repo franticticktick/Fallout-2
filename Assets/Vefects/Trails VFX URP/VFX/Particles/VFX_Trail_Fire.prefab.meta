@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 101a8868c1adc5b40bdaf7526f47b7b5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 242574
+  packageName: Trails VFX - URP
+  packageVersion: 1.0.2023
+  assetPath: Assets/Vefects/Trails VFX URP/VFX/Particles/VFX_Trail_Fire.prefab
+  uploadId: 714377

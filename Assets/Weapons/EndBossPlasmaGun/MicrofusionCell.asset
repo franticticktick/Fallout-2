@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfaf533eba8bee94194af2b70865dbe7, type: 3}
+  m_Name: MicrofusionCell
+  m_EditorClassIdentifier: 
+  weaponType: 5
+  armorClassModifier: 0
+  damageModifier: 1
+  damageResistanceModifier: 0
+  weight: 0
+  size: 20
+  name: Microfusion Cell
+  image: {fileID: 2800000, guid: 8afabdc448b26d544a83c6d725f85161, type: 3}
+  ammunitionType: 0
