@@ -3,9 +3,10 @@ namespace Skills
 
     public class Unarmed : Skill
     {
-        public override void Calculate(Character character)
+
+        protected override int CalculateValue(Character character)
         {
-            value = 30 + (2 * (character.Agility + character.Strenght));
+            return 30 + (2 * (character.Agility + character.Strenght));
         }
     }
 }

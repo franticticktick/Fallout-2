@@ -2,9 +2,10 @@ namespace Skills
 {
     public class EnergyWeapons : Skill
     {
-        public override void Calculate(Character character)
+
+        protected override int CalculateValue(Character character)
         {
-            value = 2 * character.Agility;
+            return 2 * character.Agility;
         }
     }
 }

@@ -4,8 +4,20 @@ using UnityEngine;
 [CustomEditor(typeof(Character))]
 public class CustomCharacterEditor : Editor
 {
+    [SerializeField]
+    private string trait = "";
+
+    [SerializeField]
+    private string mainSkill = "";
+
     public override void OnInspectorGUI()
     {
+        GUILayout.Label("Enter trait:");
+        trait = EditorGUILayout.TextField(trait);
+
+        GUILayout.Label("Enter main skill:");
+        mainSkill = EditorGUILayout.TextField(mainSkill);
+
         DrawDefaultInspector();
 
         Character character = (Character)target;
@@ -78,6 +90,31 @@ public class CustomCharacterEditor : Editor
         {
             character.InitStats();
             character.InitSkills();
+        }
+
+        if (GUILayout.Button("Chose Trait"))
+        {
+            character.ChoseTrait(trait);
+        }
+
+        if (GUILayout.Button("Unchose Trait"))
+        {
+            character.CancelTrait(trait);
+        }
+
+        if (GUILayout.Button("Mark skill as main"))
+        {
+            character.MarkSkillAsMain(mainSkill);
+        }
+
+        if (GUILayout.Button("Mark skill as not main"))
+        {
+            character.MarkSkillAsNotMain(mainSkill);
+        }
+
+        if (GUILayout.Button("Increment Skill Points"))
+        {
+            character.IncrementSkillPoints();
         }
 
         EditorUtility.SetDirty(character);

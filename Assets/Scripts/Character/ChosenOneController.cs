@@ -175,10 +175,6 @@ public class ChosenOneController : CharacterController
             .Where(ammunition => character.WeaponSupportAmmunitionType(
                 ammunition.AmmunitionType))
             .FirstOrDefault();
-        if (ammunition != null)
-        {
-            Debug.Log(ammunition.name);
-        }
         character.ReloadWeapon(ammunition);
 
         PlayAudioClipOneShot(reloadWeaponClip);

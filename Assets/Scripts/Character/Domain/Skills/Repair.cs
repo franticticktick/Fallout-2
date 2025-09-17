@@ -3,9 +3,9 @@ namespace Skills
     public class Repair : Skill
     {
 
-        public override void Calculate(Character character)
+        protected override int CalculateValue(Character character)
         {
-            value = 3 * character.Intelligence;
+            return 3 * character.Intelligence;
         }
     }
 }

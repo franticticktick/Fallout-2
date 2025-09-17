@@ -3,9 +3,9 @@ namespace Skills
     public class Traps : Skill
     {
 
-        public override void Calculate(Character character)
+        protected override int CalculateValue(Character character)
         {
-            value = 10 + (character.Perception + character.Agility);
+            return 10 + (character.Perception + character.Agility);
         }
     }
 }

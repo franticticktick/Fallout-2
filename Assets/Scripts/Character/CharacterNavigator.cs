@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEngine.GraphicsBuffer;
 
 public class CharacterNavigator
 {
@@ -14,7 +15,7 @@ public class CharacterNavigator
 
     private const float START_MOVE_DISTANCE = 0.6f;
     private const float STOP_MOVE_DISTANCE = 0.5f;
-    private const float ROTATION_THRESHOLD = 8f;
+    private const float ROTATION_THRESHOLD = 0.7f;
     private const float WALKING_STOP_SPEED = 0.2f;
     private const float RUNNING_STOP_SPEED = 0.6f;
 
@@ -53,6 +54,7 @@ public class CharacterNavigator
     public bool TurnTowardsTheTarget(Transform characherTransform, Vector3 enemyPosition)
     {
         Vector3 direction = (enemyPosition - characherTransform.position).normalized;
+
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
 
         characherTransform.rotation = Quaternion.Slerp(
@@ -60,8 +62,10 @@ public class CharacterNavigator
             lookRotation,
             Time.deltaTime * 10);
 
-        var angle = Vector3.Angle(characherTransform.forward, enemyPosition - characherTransform.position);
-        return angle <= ROTATION_THRESHOLD;
+        Vector3 directionToTarget = (enemyPosition - characherTransform.position).normalized;
+        Vector3 forwardDirection = characherTransform.forward;
+        float dotProduct = Vector3.Dot(forwardDirection, directionToTarget);
+        return dotProduct > ROTATION_THRESHOLD;
     }
 
     protected void StartComingUp(Vector3 position)

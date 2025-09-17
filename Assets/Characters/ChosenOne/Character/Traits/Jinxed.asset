@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b5b29c46e8cee46823c0a3d9eed7dd, type: 3}
   m_Name: Jinxed
   m_EditorClassIdentifier: 
+  chosen: 0
+  traitName: Jinxed
+  description: "\u041F\u043E\u0440\u0447\u0435\u043D\u044B\u0439"

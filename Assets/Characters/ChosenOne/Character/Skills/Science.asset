@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   main: 0
   value: 0
+  characteristicsValue: 16
+  skillName: science

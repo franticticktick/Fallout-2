@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   main: 0
   value: 0
+  skillName: barter

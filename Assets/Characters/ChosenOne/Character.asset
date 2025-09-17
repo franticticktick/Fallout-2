@@ -12,33 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc2bc0f944a5034b8519a8786b6877b, type: 3}
   m_Name: Character
   m_EditorClassIdentifier: 
-  name: 
+  name: Narg
   chosenOne: 1
   state: 0
-  strenght: 8
-  perception: 6
-  endurance: 6
-  charisma: 1
-  intelligence: 5
-  agility: 6
-  luck: 5
-  hitPoints: 700
-  currentHitPoints: 700
-  armorClass: 6
+  strenght: 3
+  perception: 4
+  endurance: 4
+  charisma: 2
+  intelligence: 4
+  agility: 4
+  luck: 4
+  hitPoints: 26
+  currentHitPoints: 26
+  armorClass: 4
   additionalArmorClass: 0
-  carryWeight: 225
-  actionPoints: 8
-  combatActionPoints: 8
-  sequence: 12
-  healingRate: 2
+  carryWeight: 100
+  actionPoints: 7
+  combatActionPoints: 7
+  sequence: 8
+  healingRate: 1
   perkRate: 3
   fireResistance: 0
-  radiationResistance: 12
+  radiationResistance: 8
   damageResistance: 0
-  poisonResistance: 30
-  skillRate: 15
-  criticalChance: 5
-  meleeDamage: 3
+  poisonResistance: 20
+  skillRate: 13
+  criticalChance: 4
+  meleeDamage: 1
   skills:
   - {fileID: 11400000, guid: fc2abe6d4ec87f34fa04b9bca60a32ae, type: 2}
   - {fileID: 11400000, guid: 620aa44ea8385ae48bce84aafdf03b08, type: 2}
@@ -75,5 +75,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b283b94c44f412945a3a15ec6e995b80, type: 2}
   - {fileID: 11400000, guid: 29cd319a6adcd15458454cde37a8cb3f, type: 2}
   - {fileID: 11400000, guid: af8726763fba2f14b9973c8aa699c608, type: 2}
+  skillPoints: 0
   weapon: {fileID: 11400000, guid: 30123d26de9105344bc2cb98ab31254e, type: 2}
-  armor: {fileID: 11400000, guid: 357713bb63a771d46b6ae188dea767ff, type: 2}
+  armor: {fileID: 11400000, guid: abfe1c9219a60b84b981faa180f32bf2, type: 2}

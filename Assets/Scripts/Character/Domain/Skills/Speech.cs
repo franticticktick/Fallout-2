@@ -3,9 +3,9 @@ namespace Skills
     public class Speech : Skill
     {
 
-        public override void Calculate(Character character)
+        protected override int CalculateValue(Character character)
         {
-            value = 5 * character.Charisma;
+            return 5 * character.Charisma;
         }
     }
 }

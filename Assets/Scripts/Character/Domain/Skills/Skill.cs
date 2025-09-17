@@ -9,14 +9,27 @@ namespace Skills
         private bool main;
 
         [SerializeField]
-        protected int value;
+        protected int value = 0;
 
-        public abstract void Calculate(Character character);
+        [SerializeField]
+        protected int characteristicsValue = 0;
+
+        [SerializeField]
+        private string skillName;
+
+        public void InitBaseValue(Character character)
+        {
+            characteristicsValue = CalculateValue(character);
+        }
+
+        protected abstract int CalculateValue(Character character);
 
         public int GetValue()
         {
-            return value;
+            return value + characteristicsValue;
         }
+
+        public bool IsEmptyValue() => value == 0;
 
         public void IncreaseValue(int value)
         {
@@ -32,6 +45,20 @@ namespace Skills
             else
             {
                 value++;
+            }
+        }
+
+        public void DicrementValue()
+        {
+            if (main)
+            {
+                value -= 2;
+                value = value < 0 ? 0 : value;
+            }
+            else
+            {
+                value--;
+                value = value < 0 ? 0 : value;
             }
         }
 
@@ -51,6 +78,8 @@ namespace Skills
             main = false;
             value -= 20;
         }
+
+        public string SkillName { get => skillName; }
     }
 
 }

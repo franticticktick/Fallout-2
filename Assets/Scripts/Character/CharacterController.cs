@@ -122,14 +122,7 @@ public class CharacterController : MonoBehaviour
         if (combatManager.IsCombatActive() && character.IsCombatTurn())
         {
             interactionTarget = target;
-            if (character.Weapon != null && character.IsWeaponRange())
-            {
-                action = TurnTowardsTargetForAttack;
-            }
-            else
-            {
-                action = Attack;
-            }
+            action = TurnTowardsTargetForAttack;
         }
     }
 

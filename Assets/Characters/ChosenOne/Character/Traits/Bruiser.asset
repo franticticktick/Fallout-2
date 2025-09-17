@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceeeee19bea55244883f9e7a30bebf69, type: 3}
   m_Name: Bruiser
   m_EditorClassIdentifier: 
+  chosen: 0
+  traitName: Bruiser
+  description: "\u0425\u0443\u043B\u0438\u0433\u0430\u043D"

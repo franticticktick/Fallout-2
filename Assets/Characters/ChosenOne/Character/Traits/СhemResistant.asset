@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2117511a032a94947a5e854ffe88d632, type: 3}
   m_Name: "\u0421hemResistant"
   m_EditorClassIdentifier: 
+  chosen: 0
+  traitName: "\u0421hemResistant"
+  description: "\u0421\u043E\u043F\u0440\u043E\u0442\u0438\u0432\u043B\u044F\u0435\u043C\u043E\u0441\u0442\u044C
+    \u0445\u0438\u043C\u0438\u0438"

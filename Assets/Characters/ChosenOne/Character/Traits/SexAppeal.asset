@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c79c4e1b47542da4eaaf51d2e3d11cc7, type: 3}
   m_Name: SexAppeal
   m_EditorClassIdentifier: 
+  chosen: 0
+  traitName: SexAppeal
+  description: "\u0421\u0435\u043A\u0441\u0430\u043F\u0438\u043B\u044C\u043D\u043E\u0441\u0442\u044C"

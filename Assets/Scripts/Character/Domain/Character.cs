@@ -5,6 +5,7 @@ using Skills;
 using Traits;
 using Weapons;
 using Armors;
+using System.Linq;
 
 [CreateAssetMenu(fileName = "New Character", menuName = "Character", order = 1)]
 public class Character : ScriptableObject
@@ -105,7 +106,8 @@ public class Character : ScriptableObject
     [SerializeField]
     private List<Trait> traits = new();
 
-    private int skillPoints = 0;
+    [SerializeField]
+    private int skillPoints;
 
     private int level = 1;
 
@@ -124,6 +126,12 @@ public class Character : ScriptableObject
         InitCombatActionPoints();
     }
 
+    private void Awake()
+    {
+        InitCombatActionPoints();
+        InitStats();
+    }
+
     public void InitStats()
     {
         CalculateStrenhghtBasedDerivedStatistic();
@@ -132,36 +140,40 @@ public class Character : ScriptableObject
         CalculateEnduranceBasedDerivedStatistic();
         CalculateIntelligenceBasedDerivedStatistic();
         CalculateLuckBasedDerivedStatistic();
+        InitSkills();
     }
 
     public void InitSkills(List<Skill> skills)
     {
         this.skills = skills;
-        skills?.ForEach(skill => skill.Calculate(this));
+        skills?.ForEach(skill => skill.InitBaseValue(this));
     }
 
     public void InitSkills()
     {
-        skills?.ForEach(skill => skill.Calculate(this));
+        skills?.ForEach(skill => skill.InitBaseValue(this));
     }
 
-    public void ChoseTrait(Type traitType)
+    public void ChoseTrait(string name)
     {
-        Trait trait = traits.Find(t => t.GetType().Equals(traitType));
-        trait?.Chose();
+        Trait trait = traits.Find(t => t.TraitName.Equals(name));
+        if (!trait.IsChosen())
+        {
+            trait?.Chose(this);
+        }
     }
 
-    public void CancelTrait(Type traitType)
+    public void CancelTrait(string name)
     {
-        Trait trait = traits.Find(p => p.GetType().Equals(traitType));
-        trait?.Chose();
+        Trait trait = traits.Find(t => t.TraitName.Equals(name));
+        trait?.UnChose(this);
     }
 
     public void IncrementStrenght(int value)
     {
         strenght = IncrementCharacteristic(strenght, value);
         CalculateStrenhghtBasedDerivedStatistic();
-        skills.ForEach(skill => skill.Calculate(this));
+        skills.ForEach(skill => skill.InitBaseValue(this));
     }
 
     private void CalculateStrenhghtBasedDerivedStatistic()
@@ -195,7 +207,7 @@ public class Character : ScriptableObject
     {
         agility = IncrementCharacteristic(agility, value);
         CalculateAgilityBasedDerivedStatistic();
-        skills.ForEach(skill => skill.Calculate(this));
+        skills.ForEach(skill => skill.InitBaseValue(this));
     }
 
     private void CalculateAgilityBasedDerivedStatistic()
@@ -208,7 +220,7 @@ public class Character : ScriptableObject
     {
         endurance = IncrementCharacteristic(endurance, value);
         CalculateEnduranceBasedDerivedStatistic();
-        skills.ForEach(skill => skill.Calculate(this));
+        skills.ForEach(skill => skill.InitBaseValue(this));
     }
 
     private void CalculateEnduranceBasedDerivedStatistic()
@@ -223,7 +235,7 @@ public class Character : ScriptableObject
     {
         luck = IncrementCharacteristic(luck, value);
         CalculateLuckBasedDerivedStatistic();
-        skills.ForEach(skill => skill.Calculate(this));
+        skills.ForEach(skill => skill.InitBaseValue(this));
     }
 
     private void CalculateLuckBasedDerivedStatistic()
@@ -235,7 +247,7 @@ public class Character : ScriptableObject
     {
         intelligence = IncrementCharacteristic(intelligence, value);
         CalculateIntelligenceBasedDerivedStatistic();
-        skills.ForEach(skill => skill.Calculate(this));
+        skills.ForEach(skill => skill.InitBaseValue(this));
     }
 
     private void CalculateIntelligenceBasedDerivedStatistic()
@@ -247,7 +259,7 @@ public class Character : ScriptableObject
     {
         perception = IncrementCharacteristic(perception, value);
         CalculatePerceptionBasedDerivedStatistic();
-        skills.ForEach(skill => skill.Calculate(this));
+        skills.ForEach(skill => skill.InitBaseValue(this));
     }
 
     private void CalculatePerceptionBasedDerivedStatistic()
@@ -258,7 +270,7 @@ public class Character : ScriptableObject
     public void IncrementCharisma(int value)
     {
         charisma = IncrementCharacteristic(charisma, value);
-        skills.ForEach(skill => skill.Calculate(this));
+        skills.ForEach(skill => skill.InitBaseValue(this));
     }
 
     public void HitDamageWithBurstFire(Character character, int distance)
@@ -365,7 +377,9 @@ public class Character : ScriptableObject
         var damageWihoutThreshold = damage - character.GetArmorDamageThreshold(damageType);
         var finalDamageResistance = character.GetArmorDamageresistance(damageType) + ammunitionDamageReistance;
 
-        return damageWihoutThreshold - damageWihoutThreshold * finalDamageResistance / 100;
+        var finaldamage = damageWihoutThreshold - damageWihoutThreshold
+            * finalDamageResistance / 100;
+        return finaldamage < 0 ? 0 : finaldamage;
     }
 
     private int CalculateDamageWithBurstFire(Character character, int distance)
@@ -574,6 +588,11 @@ public class Character : ScriptableObject
     public double CurrentHitPoints { get => currentHitPoints; }
     public double HitPoints { get => hitPoints; }
     public Armor Armor { get => armor; }
+    public int CarryWeight { get => carryWeight; set => carryWeight = value; }
+    public int CriticalChance { get => criticalChance; set => criticalChance = value; }
+    public int Sequence { get => sequence; set => sequence = value; }
+    public int HealingRate { get => healingRate; set => healingRate = value; }
+    public int SkillPoints { get => skillPoints; }
 
     public bool IsCombatTurn() => state == CharacterState.CombatTurn;
 
@@ -717,7 +736,7 @@ public class Character : ScriptableObject
         hitPoints += value;
     }
 
-    public void IncreaseSkill(Type skillType)
+    public void IncreaseSkill(string skillName)
     {
         if (skillPoints == 0)
         {
@@ -725,12 +744,37 @@ public class Character : ScriptableObject
         }
         skillPoints--;
 
-        Skill skill = GetSkillByType(skillType);
+        var skill = skills.Where(skill => skill.SkillName.Equals(skillName))
+            .FirstOrDefault();
         if (skill != null)
         {
             skill.IncrementValue();
         }
     }
+
+    public void DecreaseSkill(string skillName)
+    {
+        var skill = skills.Where(skill => skill.SkillName.Equals(skillName))
+            .FirstOrDefault();
+        if (skill != null)
+        {
+            skill.DicrementValue();
+            skillPoints++;
+        }
+    }
+
+    public bool SkillHasEmptyValue(string skillName)
+    {
+        var skill = skills.Where(skill => skill.SkillName.Equals(skillName))
+            .FirstOrDefault();
+        if (skill == null)
+        {
+            return false;
+        }
+        return skill.IsEmptyValue();
+    }
+
+    public bool IsSkillPointsEmpty() => skillPoints == 0;
 
     public void GetTurnInCombat()
     {
@@ -1040,5 +1084,54 @@ public class Character : ScriptableObject
             return weapon.GetStoreCharge();
         }
         return "";
+    }
+
+    public List<Trait> GetChosenTraits()
+    {
+        return traits.Where(trait => trait.IsChosen())
+            .ToList();
+    }
+
+    public List<Skill> GetMainSkills()
+    {
+        return skills.Where(skill => skill.IsMain())
+            .ToList();
+    }
+
+    public void MarkSkillAsMain(string skillName)
+    {
+        List<Skill> mainSkills = skills.Where(skill => skill.IsMain())
+            .ToList();
+        if (mainSkills.Count == 3)
+        {
+            throw new UnableMarksSkillAsMainException("Can't mark skill as main");
+        }
+        var skill = skills.Where(skill => skill.SkillName.Equals(skillName))
+            .FirstOrDefault();
+        if (skill != null)
+        {
+            if (!skill.IsMain())
+            {
+                skill.MarkAsMain();
+            }
+        }
+    }
+
+    public void MarkSkillAsNotMain(string skillName)
+    {
+        var skill = skills.Where(skill => skill.SkillName.Equals(skillName))
+            .FirstOrDefault();
+        if (skill != null)
+        {
+            if (skill.IsMain())
+            {
+                skill.MarkAsNotMain();
+            }
+        }
+    }
+
+    public void IncrementSkillPoints()
+    {
+        skillPoints++;
     }
 }

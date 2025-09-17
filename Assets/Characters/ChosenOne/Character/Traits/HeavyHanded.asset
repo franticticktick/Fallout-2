@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de2088e7ed78f7c45866d3c220500ee2, type: 3}
   m_Name: HeavyHanded
   m_EditorClassIdentifier: 
+  chosen: 1
+  traitName: HeavyHanded
+  description: "\u0422\u044F\u0436\u0451\u043B\u0430\u044F \u0440\u0443\u043A\u0430"

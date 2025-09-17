@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Frank Horrigan
   chosenOne: 0
-  state: 0
+  state: 1
   strenght: 3
   perception: 6
   endurance: 6
@@ -28,7 +28,7 @@ MonoBehaviour:
   additionalArmorClass: 0
   carryWeight: 100
   actionPoints: 7
-  combatActionPoints: 7
+  combatActionPoints: 3
   sequence: 12
   healingRate: 2
   perkRate: 3
@@ -75,5 +75,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 827538e8673f4df408734db6e3a67836, type: 2}
   - {fileID: 11400000, guid: 7e0ab6bb1ad9c0a42804e0ba58e601af, type: 2}
   - {fileID: 11400000, guid: 7a26f0957dfe346408e4327e219f63c0, type: 2}
-  weapon: {fileID: 11400000, guid: d68cb3bc1623c9240b598c7e4be848a4, type: 2}
+  weapon: {fileID: 11400000, guid: e00fb27f48f7da9479cdf4ab7c10e957, type: 2}
   armor: {fileID: 0}

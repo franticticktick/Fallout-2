@@ -3,9 +3,10 @@ namespace Skills
 
     public class SmallGuns : Skill
     {
-        public override void Calculate(Character character)
+
+        protected override int CalculateValue(Character character)
         {
-            value = 5 + (4 * character.Agility);
+            return 5 + (4 * character.Agility);
         }
     }
 }

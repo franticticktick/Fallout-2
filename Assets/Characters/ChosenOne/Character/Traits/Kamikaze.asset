@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b33a2da8ccc726547a664f71da744669, type: 3}
   m_Name: Kamikaze
   m_EditorClassIdentifier: 
+  chosen: 0
+  traitName: Kamikaze
+  description: "\u041A\u0430\u043C\u0438\u043A\u0430\u0434\u0437\u0435"

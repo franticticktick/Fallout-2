@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548061042764f4040848363e60b0902f, type: 3}
   m_Name: SmallFrame
   m_EditorClassIdentifier: 
+  chosen: 0
+  traitName: SmallFrame
+  description: "\u041C\u0438\u043D\u0438\u0430\u0442\u044E\u0440\u043D\u044B\u0439"

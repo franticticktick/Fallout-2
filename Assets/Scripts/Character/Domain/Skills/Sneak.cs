@@ -3,9 +3,9 @@ namespace Skills
     public class Sneak : Skill
     {
 
-        public override void Calculate(Character character)
+        protected override int CalculateValue(Character character)
         {
-            value = 5 + (3 * character.Agility);
+            return 5 + (3 * character.Agility);
         }
     }
 }

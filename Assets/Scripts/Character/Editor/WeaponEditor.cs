@@ -27,6 +27,7 @@ public class WeaponEditor : EditorWindow
             if(withStore)
             {
                 WeaponStore store = ScriptableObject.CreateInstance<WeaponStore>();
+                AssetDatabase.CreateAsset(store, weaponFolder + "/WeaponStore.asset");
                 weapon.Store = store;
             }
             AssetDatabase.SaveAssets();

@@ -3,9 +3,9 @@ namespace Skills
     public class Steal : Skill
     {
 
-        public override void Calculate(Character character)
+        protected override int CalculateValue(Character character)
         {
-            value = 3 * character.Agility;
+            return 3 * character.Agility;
         }
     }
 

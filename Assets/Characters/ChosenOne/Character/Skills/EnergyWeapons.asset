@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035f3d90c2a2e9d4e8b4aa0fa4965305, type: 3}
   m_Name: EnergyWeapons
   m_EditorClassIdentifier: 
-  main: 0
-  value: 80
+  main: 1
+  value: 24
+  characteristicsValue: 8
+  skillName: energyWeapon

@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b676107abc31f846bb6a076184cc791, type: 3}
   m_Name: "\u0421hemReliant"
   m_EditorClassIdentifier: 
+  chosen: 0
+  traitName: "\u0421hemReliant"
+  description: "\u0427\u0443\u0432\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C
+    \u043A \u0445\u0438\u043C\u0438\u0438"

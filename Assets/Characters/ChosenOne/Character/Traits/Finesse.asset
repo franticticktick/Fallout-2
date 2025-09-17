@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 509c9bf03cae18242b65143e6ecd8022, type: 3}
   m_Name: Finesse
   m_EditorClassIdentifier: 
+  chosen: 0
+  traitName: Finesse
+  description: "\u0422\u043E\u0447\u043D\u043E\u0441\u0442\u044C"
