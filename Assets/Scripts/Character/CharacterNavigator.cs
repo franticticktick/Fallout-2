@@ -2,7 +2,6 @@ using System;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AI;
-using static UnityEngine.GraphicsBuffer;
 
 public class CharacterNavigator
 {
@@ -15,7 +14,7 @@ public class CharacterNavigator
 
     private const float START_MOVE_DISTANCE = 0.6f;
     private const float STOP_MOVE_DISTANCE = 0.5f;
-    private const float ROTATION_THRESHOLD = 0.7f;
+    private const float ROTATION_THRESHOLD = 0.99f;
     private const float WALKING_STOP_SPEED = 0.2f;
     private const float RUNNING_STOP_SPEED = 0.6f;
 

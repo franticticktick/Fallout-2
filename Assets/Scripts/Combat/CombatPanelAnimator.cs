@@ -63,6 +63,8 @@ public class CombatPanelAnimator : MonoBehaviour
     [SerializeField]
     private Image thirdDigitArmorClass;
 
+    public event Action<bool> PanelOpen;
+
     void Start()
     {
         foreach (var sprite in numsTransitions)
@@ -156,6 +158,7 @@ public class CombatPanelAnimator : MonoBehaviour
                 cmbt?.gameObject.SetActive(true);
                 DisableAction();
                 timer = 0f;
+                PanelOpen?.Invoke(true);
             }
         }
     }
@@ -234,14 +237,19 @@ public class CombatPanelAnimator : MonoBehaviour
         }
     }
 
-    public void ToggleTurn()
-    {
-        turnButton.interactable = !turnButton.interactable;
-    }
-
     public void EnableCmbt()
     {
         cmbtButton.interactable = true;
+    }
+
+    public void EnableTurn()
+    {
+        turnButton.interactable = true;
+    }
+
+    public void DisableTurn()
+    {
+        turnButton.interactable = false;
     }
 
     public void DisableCmbt()

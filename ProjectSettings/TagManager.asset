@@ -86,6 +86,7 @@ TagManager:
   - critChanceName
   - actionPointFirstDigit
   - actionPointSecondDigit
+  - YK42B
   layers:
   - Default
   - TransparentFX

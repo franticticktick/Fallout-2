@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -23,7 +24,7 @@ public class CharacterController : MonoBehaviour
     protected CharacterAnimator characterAnimator;
 
     [SerializeField]
-    protected CombaManager combatManager;
+    protected CombatManager combatManager;
 
     [SerializeField]
     private Transform firePoint;
@@ -82,6 +83,12 @@ public class CharacterController : MonoBehaviour
         {
             character.ActionDone += OnLogMessage;
         }
+        AdditionalInit();
+    }
+
+    protected virtual void AdditionalInit()
+    {
+
     }
 
     void Update()

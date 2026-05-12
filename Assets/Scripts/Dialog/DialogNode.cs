@@ -1,31 +1,54 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "DialogNode", menuName = "DialogNode", order = 1)]
 public class DialogNode : ScriptableObject
 {
-    [SerializeField]
-    private int id;
 
     [SerializeField]
     private string text;
 
     [SerializeField]
-    private List<DialogNode> nodes = new();
+    private List<KeyValuePair> variants = new();
 
     [SerializeField]
-    private List<KeyValuePair> lines = new();
+    private Sprite[] frames;
 
-    public DialogNode GetNodeById(int id) =>
-        nodes.Where(n => n.id == id).FirstOrDefault();
+    [SerializeField]
+    private AudioClip audioClip;
 
-    public List<KeyValuePair> GetLines() => lines;
+    [SerializeField]
+    private Sprite background;
+
+    public string Text { get => text; }
+    public AudioClip AudioClip { get => audioClip; }
+    public Sprite[] Frames { get => frames; }
+    public Sprite Background { get => background; }
+
+    public List<KeyValuePair> GetLVariants() => variants;
 
     [System.Serializable]
     public class KeyValuePair
     {
-        public int key;
-        public string value;
+        public string actionName;
+
+        public string text;
+
+        public DialogNode node;
+
+        public DialogNode GetNode()
+        {
+            return node;
+        }
+
+        public string GetText()
+        {
+            return text;
+        }
+
+        public string GetActionName()
+        {
+            return actionName;
+        }
     }
 }

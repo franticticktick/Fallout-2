@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc2bc0f944a5034b8519a8786b6877b, type: 3}
   m_Name: Character
   m_EditorClassIdentifier: 
+  name: "\u0421\u0435\u0440\u0436\u0438\u043D\u0442 \u0413\u0440\u0430\u043D\u0438\u0442"
+  chosenOne: 0
   state: 1
   strenght: 1
   perception: 1
@@ -73,5 +75,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 525621afb823faa42a74dcc2a58aabfc, type: 2}
   - {fileID: 11400000, guid: 170a4ef76d6383e42bd44da728abe425, type: 2}
   - {fileID: 11400000, guid: 0d11355325323574fa4437c2824fdea8, type: 2}
+  skillPoints: 0
   weapon: {fileID: 0}
   armor: {fileID: 0}

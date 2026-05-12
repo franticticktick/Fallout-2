@@ -21,6 +21,9 @@ public class NpcController : CharacterController
     [SerializeField]
     private Weapon additionalWeapon;
 
+    [SerializeField]
+    private DialogNode dialog;
+
     private void PerformGameAction()
     {
         switch (character.GetWeaponMode())
@@ -139,6 +142,7 @@ public class NpcController : CharacterController
         characterAnimator.DisableAnimations();
         characterNavigator.StopInPlace();
     }
+
 
     public void TakeCombatTurn()
     {
@@ -315,6 +319,32 @@ public class NpcController : CharacterController
         {
             currentWeaponObject.gameObject.SetActive(false);
         }
+    }
+
+    public DialogNode Dialog { get => dialog; }
+
+    public void StartCombat()
+    {
+        character.ChangeStateToCombatTurn();
+        this.interactionTarget = combatManager.GetChosenOne().transform;
+
+        var distance = CalculateDistance();
+        stopDistance = CalculateStopDistance(distance);
+
+        combatManager?.StartCombat(this);
+    }
+
+    private void OnCombarStarted(bool started)
+    {
+        if (started)
+        {
+            PerformGameAction();
+        }
+    }
+
+    protected override void AdditionalInit()
+    {
+        combatManager.CombatStarted += OnCombarStarted;
     }
 }
 

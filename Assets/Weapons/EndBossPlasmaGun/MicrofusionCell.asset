@@ -17,7 +17,7 @@ MonoBehaviour:
   damageModifier: 1
   damageResistanceModifier: 0
   weight: 0
-  size: 2
+  size: 41
   name: Microfusion Cell
   image: {fileID: 2800000, guid: 8afabdc448b26d544a83c6d725f85161, type: 3}
   ammunitionType: 0
